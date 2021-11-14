@@ -1,3 +1,5 @@
+---
+
 **VERSION FRANÇAISE [ENGLISH VERSION BELOW]**
 
 ---------------------------------------------
@@ -17,7 +19,7 @@ La différence entre les schémas: dans le schéma de jeu des données toutes le
 Il existe plusieurs outils pour valider un schéma json. Voir: https://json-schema.org/implementations.html#validators
 Le plus simple est utilisé les outils en ligne, par exemple https://jschon.dev/ ou https://jsonschemalint.com/#!/version/draft-07/markup/json
 
-
+---
 
 **ENGLISH VERSION [VERSION FRANÇAISE PLUS HAUT]**
 
