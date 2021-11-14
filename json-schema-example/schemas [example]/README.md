@@ -1,5 +1,3 @@
----
-
 **VERSION FRANÇAISE [ENGLISH VERSION BELOW]**
 
 ---------------------------------------------
