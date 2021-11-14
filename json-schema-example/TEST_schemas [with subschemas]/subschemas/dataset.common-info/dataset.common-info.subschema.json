@@ -1,0 +1,59 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas [with subschemas]/subschemas/dataset.common-info/dataset.common-info.subschema.json",
+    "title": "Common part for all TELMA corpus",
+    "description": "This subschema describes a common part of all dataset schemas hosted on TELMA. This is the common part devoted to the general presentation of the corpus (title, web address, authors, etc.). ",
+    "type": "object",
+    "properties":
+    {
+        "datasetName":
+        {
+            "description": "The name of the dataset",
+            "type": "string"
+        },
+        "datasetURL":
+        {
+            "description": "The web adresse where the dataset is published by TELMA",
+            "type": "string"
+        },
+        "datasetAuthors":
+        {
+            "description": "The authors of the dataset",
+            "type": "array",
+            "items":
+            {
+                "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        },
+        "datasetCreationDate":
+        {
+            "description": "Date (YYYY-MM-DD, for example, 2018-11-13) when this dataset json file was created. For /date/format/ specification see https://json-schema.org/understanding-json-schema/reference/string.html",
+            "type": "string",
+            "format": "date"
+        },
+        "datasetLicence":
+        {
+            "description": "Licence associated with this dataset",
+            "type": "string"
+        },
+        "datasetStatus":
+                {
+                    "description": "Mark if the dataset is published or not on TELMA. In TELMA database value 1 means /not published/ and value 2 means /published/. Only can use two defined values /published/ or /not published/",
+                    "type": "string",
+                    "enum":
+                    [
+                        "not published",
+                        "published"
+                    ]
+                }
+    },
+    "required":
+    [
+        "datasetName",
+        "datasetURL",
+        "datasetCreationDate",
+        "datasetLicence"
+    ]
+}

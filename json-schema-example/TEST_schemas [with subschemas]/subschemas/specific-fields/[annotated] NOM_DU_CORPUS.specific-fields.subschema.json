@@ -1,0 +1,406 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas [with subschemas]/subschemas/specific-fields/NOM_DU_CORPUS.specific-fields.subschema.json",
+    "title": "NOM_DU_CORPUS specific fields subschema",
+    "description": "This subschema describes a specific part of the given dataset (the particular fields of the corpus).",
+    "type": "object",
+    "properties":
+    {
+        // BEGIN. Information about a specific fields of dataset item (record)
+        "itemId":
+        {
+            "description": "The unique identifier for a item",
+            "type": "integer"
+        },
+        "itemURL":
+        {
+            "description": "The unique identifier for a item",
+            "type": "string"
+        },
+        "itemStatus":
+        {
+            "description": "Mark if the item is published or not on TELMA. In TELMA database value 1 means /not published/ and value 2 means /published/. Only can use two defined values /published/ or /not published/",
+            "type": "string",
+            "enum":
+            [
+                "not published",
+                "published"
+            ]
+        },
+        "date":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "dateLibre":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "typeDocument":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "typeDocumentAutre":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "categorieDocument":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "categorieRegistre":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "coteArchive":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "support":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "lettreRetaillee":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "hauteurDepliee":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "largeur":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "repliEventuel":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "margeSuperieureInitiale":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "margeSuperieureHastes":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "margeLaterale1":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "margeLaterale2":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "adresse":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "salut":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "formulePerpetuite":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "incipit":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "initiale":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "InitialeAutre":
+        {
+            // BEGIN. Reference to group of sub-fields described below as subschema throught #/$defs
+            "$ref": "#/$defs/GroupInitialeAutre"
+            // END. Reference to group of sub-fields described below as subschema throught #/$defs
+        },
+        "lettresAllongees":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "hastesAllongees":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "semblablesAutre":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "premiereLigneAutre":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "nombreLignes":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "ratures":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "grattagesReecritures":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "descriptionAutre":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "bulleAnneau":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "bulleAnneauAutre":
+        {
+            // BEGIN. Reference to group of sub-fields described below as subschema throught #/$defs
+            "$ref": "#/$defs/GroupBulleAnneauAutre"
+            // END. Reference to group of sub-fields described below as subschema throught #/$defs
+        },
+        "marqueApprobationDroit":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "marqueApprobationDroitAutre":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "marqueApprobationGauche":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "marqueApprobationGaucheAutre":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "taxation":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "taxateur":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "mentionsPlicaAutre":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "marqueTrousAttache":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "scriptor":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "rescrit":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "mentionsHorsTeneurPlicaAutre":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "adresseExterne":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "marquesEnregistrement":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "porteur":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "destinataire":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "mentionsHorsTeneurFaceBAutre":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "analysesMedievales":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "analyseContemporaine":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "transcription":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "notes":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "donnesReuniesPar":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "donneesSaisiesPar":
+        {
+            "description": "Add description here",
+            "type": "string"
+        },
+        "correctionsRevisionsPar":
+        {
+            "description": "Add description here",
+            "type": "string"
+        }
+        // END. Information about a specific fields of dataset item (record)
+    },
+    "required":
+    [
+        "dateLibre",
+        "coteArchive",
+        "support",
+        "ratures",
+        "grattagesReecritures",
+        "donnesReuniesPar",
+        "donneesSaisiesPar"
+    ],
+
+    // BEGIN. Definitions for groups of fields
+    "$defs":
+    {
+        // BEGIN. This is a group (described as a json object and referenced above with #/$defs ) which consists of several sub-fields.
+        "GroupInitialeAutre":
+        {
+            "description": "This is a group. Add group description here",
+            "type": "object",
+            "properties":
+            {
+                "initialeNue":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "initialeCadelee":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "initialeCadeleeAutre":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                }
+            }
+        },
+        // END. This is a group (described as a json object and referenced above with #/$defs ) which consists of several sub-fields.
+        
+        // BEGIN. This is a group (described as a json object and referenced above with #/$defs ) which consists of several sub-fields.
+        "GroupBulleAnneauAutre":
+        {
+            "description": "This is a group. Add group description here",
+            "type": "object",
+            "properties":
+            {
+                "presenceBulle":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "dechirureSupport":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "tracePerforation":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "attacheRestauree":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "bulleFil":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "bulleFilAutre":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "couleurSoie":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "couleurSoieAutre":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                }
+            },
+            "required":
+            [
+                "dechirureSupport",
+                "tracePerforation"
+            ]
+        }
+        // END. This is a group (described as a json object and referenced above with #/$defs ) which consists of several sub-fields.
+    }
+    // END. Definitions for groups of fields
+}

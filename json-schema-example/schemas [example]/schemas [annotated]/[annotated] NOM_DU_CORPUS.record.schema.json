@@ -1,0 +1,313 @@
+/****************************************************************************************************************************************************************************/
+/* AVERTISSEMENT: Le format json n’utilise pas les commentaires; un fichier commenté ne peut donc pas être valide. Pour la validation, utilisez les fichiers non commentés. */
+/* CAUTION: The json files don’t use comments; so, a commented file cannot be valid. For validation, use the files without comments.                                        */
+/****************************************************************************************************************************************************************************/
+
+/****************************************************************************************************************************************************************************/
+/* Ceci est un modèle de schéma basé sur des données fictives. L'objectif de ce modèle est d’indiquer les principaux éléments et la structure d'un schéma.                  */
+/* Pour un schéma basé sur les données réelles du corpus, utilisez le schéma non annoté.                                                                                    */
+/****************************************************************************************************************************************************************************/
+/* This is a schema model based on the fictif data. The purpose of this model is to indicate the main elements and schema structure.                                        */
+/* For a schema based on the real corpus data, use the not annotated schema.                                                                                                */
+/****************************************************************************************************************************************************************************/
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/NOM_DU_CORPUS.record.schema.json",
+    "title": "NOM_DU_CORPUS schema",
+    "description": "It is a complete schema for the file with only one record of dataset. It includes the two parts: i) common part for all corpus; ii) specific fields of the given corpus. ",
+    "type": "object",
+    "properties":
+    {
+        // DEBUT. Information sur le jeu des données. Cette information est commune à tous les corpus de TELMA
+        // BEGIN. Information about dataset. This information is commun for all TELMA corpora.
+        "datasetInformation":
+        {
+            "description": "This is a corpus common informations (title, authors, date of creation, etc.)",
+            "type": "object",
+            "properties":
+            {
+                "datasetName":
+                {
+                    "description": "The name of the dataset",
+                    "type": "string"
+                },
+                "datasetURL":
+                {
+                    "description": "The web adresse where the dataset is published by TELMA",
+                    "type": "string"
+                },
+                "datasetJsonSchemaURL":
+                {
+                    "description": "Indicate here where is a json schema for these data. All schema will be stored on GitHub profile of COSME2",
+                    "type": "string"
+                },
+                "datasetAuthors":
+                {
+                    "description": "The authors of the dataset",
+                    "type": "array",
+                    "items":
+                    {
+                        "type": "string"
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                    // Il faut au moins un auteur. Les noms des auteurs doivent être uniques
+                    // Minium 1 autor. Authors names must be unique
+                },
+                /*******************************************************************************************************************************/
+                /* Pour éviter d’avoir de trop larges fichiers difficiles à ouvrir, le jeu des données est divisé en plusieurs parties.        */
+                /* La division se fait à la base de 2000 notices pour chaque partie (ce qui est plus ou moins égal à un fichier json de 10MB). */
+                /* PartitionNumber - est le numéro de la partie                                                                                */
+                /* PartitionsInDataset - nombre de parties dans le jeu des données                                                             */
+                /* ItemsInPartition - nombre de l’unité dans la partie                                                                         */
+                /* ItemsInDataset - nombre de l’unité dans le jeu des données                                                                  */
+                /*******************************************************************************************************************************/
+                /* To avoid to have too large files difficult to open, the dataset is divided into several parts.                              */
+                /* The division is made on the basis of 2000 records by part (it's equal, more or less, to a 10MB json file).                  */
+                /* PartitionNumber - parts number                                                                                              */
+                /* PartitionsInDataset - number of parts in the dataset                                                                        */
+                /* ItemsInPartition - number of the items in the part                                                                          */
+                /* ItemsInDataset - number of the items in the dataset                                                                         */
+                /*******************************************************************************************************************************/
+                "datasetPartition":
+                {
+                    "description": "To avoid to have too large files difficult to open, the dataset is divided into several parts. The division is made on the basis of 2000 records by part (it's equal, more or less, to a 10MB json file).",
+                    "type": "object",
+                    "properties":
+                    {
+                        "PartitionNumber":
+                        {
+                            "description": "parts number",
+                            "type": "integer"
+                        },
+                        "PartitionsInDataset":
+                        {
+                            "description": "number of parts in the dataset",
+                            "type": "integer"
+                        },
+                        "ItemsInPartition":
+                        {
+                            "description": "number of the items in the part",
+                            "type": "integer"
+                        },
+                        "ItemsInDataset":
+                        {
+                            "description": "number of the items in the dataset",
+                            "type": "integer"
+                        }
+                    }
+                },
+                "datasetCreationDate":
+                {
+                    "description": "Date (YYYY-MM-DD, for example, 2018-11-13) when this dataset json file was created. For /date/format/ specification see https://json-schema.org/understanding-json-schema/reference/string.html",
+                    "type": "string",
+                    "format": "date"
+                },
+                "datasetLicence":
+                {
+                    "description": "Licence associated with this dataset",
+                    "type": "string"
+                },
+                "datasetStatus":
+                {
+                    "description": "Mark if the dataset is published or not on TELMA. In TELMA database value 1 means /not published/ and value 2 means /published/. Only can use two defined values /published/ or /not published/",
+                    "type": "string",
+                    "enum":
+                    [
+                        "not published",
+                        "published"
+                    ]
+                    // Définir la liste des valeurs autorisées
+                    // Define the authorized values list
+                }
+            },
+            "required":
+            [
+                "datasetName",
+                "datasetURL",
+                "datasetCreationDate",
+                "datasetLicence"
+            ]
+        },
+        // FIN. Information sur le jeu des données. Cette information est commune à tous les corpus de TELMA
+        // END. Information about dataset. This information is commun for all TELMA corpora.
+ 
+        /*******************************************************************************************************************************************************************/
+        /* Dans le fichier d’un jeu des données, toutes les notices sont regroupées comme les éléments d’un tableau (array). Chaque notice, à son tour, est un objet json. */
+        /* C'est la seule différence entre le fichier avec un jeu des données et celui avec une seule notice.                                                              */
+        /*******************************************************************************************************************************************************************/
+        /* In a dataset file, all items (item = record) are grouped together like the array elements. Each item, in the same time, is a json object.                       */
+        /* This is the only difference between the file with a dataset and the one with a single record.                                                                   */
+        /********************************************************************************************************************************************************************/
+
+        // DEBUT. Information sur la notices de jeu des données. Ce fichier ne contient qu'une seule notice (qui est un objet json).
+        // BEGIN. Information about dataset item (item = record). This file contains only one record (which is a json object).
+        "datasetItem":
+        {
+            "description": "There go the item (item = corpus record) as json object",
+            "type": "object",
+            "properties":
+            {
+
+                // DEBUT. Partie commune à toutes les notices
+                // BEGIN. Common parts to all items
+                "itemIdTELMA":
+                {
+                    "description": "The TELMA unique identifier for a item. Not the same as corpus unique indentifier; this is, TELMA use two different identifiers, one common for all TELMA corpora, and another one used only at the level of given corpus. This ID is TELMA common ID",
+                    "type": "integer"
+                },
+                "itemURL":
+                {
+                    "description": "The unique identifier for a item",
+                    "type": "string"
+                },
+                "itemStatus":
+                {
+                    "description": "Mark if the item is published or not on TELMA. In TELMA database value 1 means /not published/ and value 2 means /published/. Only can use two defined values /published/ or /not published/",
+                    "type": "string",
+                    "enum":
+                    [
+                        "not published",
+                        "published"
+                    ]
+                    // Définir la liste des valeurs autorisées
+                    // Define the authorized values list
+                },
+                // FIN. Partie commune à toutes les notices
+                // END. Common parts to all items
+
+                // DEBUT. Les champs spécifiques à chaque corpus. Les clés json ne sont que des exemples et ils varient en fonction du corpus.
+                // BEGIN. Specific parts for this corpus. The json keys are given only for exemple purpose and they vary according to corpus.
+                "date":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "dateLibre":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+
+                // DEBUT. Exemple - Element simple
+                // BEGIN. Example - Simple element
+                "typeDocument":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                // FIN. Exemple - Elément simple
+                // END. Example - Simple element
+
+                "incipit":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "initiale":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+
+                // DEBUT. Exemple - Elément groupé. C'est un group (présenté comme un objet json) qui consiste de plusieurs sous-champs.
+                // BEGIN. Example - Grouped element. This is a group (described as a json object) which consists of several sub-fields.
+                "InitialeAutre":
+                {
+                    // BEGIN. This is a group (described as a json object) which consists of several sub-fields.
+                    "description": "This is a group. Add group description here",
+                    "type": "object",
+                    "properties":
+                    {
+                        "initialeNue":
+                        {
+                            "description": "Add description here",
+                            "type": "string"
+                        },
+                        "initialeCadelee":
+                        {
+                            "description": "Add description here",
+                            "type": "string"
+                        },
+                        "initialeCadeleeAutre":
+                        {
+                            "description": "Add description here",
+                            "type": "string"
+                        }
+                    }
+                },
+                // FIN. Exemple - Elément groupé. C'est un group (présenté comme un objet json) qui consiste de plusieurs sous-champs.
+                // END. Example - Grouped element. This is a group (described as a json object) which consists of several sub-fields.
+
+                "lettresAllongees":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "hastesAllongees":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+
+                // DEBUT. Exemple - Elément tableau (array). Si nécessaire, ajoutez des conditions supplémentaires (uniquement valeur unique, nombre minimum de l’unité, etc.)
+                // BEGIN. Example - Array element. If necessary, add additional conditions (unique value only, minimum number of items, etc.)
+                "semblablesAutre":
+                {
+                    "description": "Add description here",
+                    "type": "array",
+                    "items":
+                    {
+                        "type": "string"
+                    }
+                },
+                // FIN. Exemple - Elément tableau (array). Si nécessaire, ajoutez des conditions supplémentaires (uniquement valeur unique, nombre minimum de l’unité, etc.)
+                // END. Example - Array element. If necessary, add additional conditions (unique value only, minimum number of items, etc.)
+
+                "premiereLigneAutre":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "nombreLignes":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "ratures":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "grattagesReecritures":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                }
+                // FIN. Les champs spécifiques à chaque corpus. Les clés json ne sont que des exemples et ils varient en fonction du corpus.
+                // END. Specific parts for this corpus. The json keys are given only for exemple purpose and they vary according to corpus.
+            },
+            "required":
+            [
+                /********************************************************************************************************************************************************/
+                /* Mettre ici tous les champs obligatoires d'une notice. Par défaut, les champs communs à toutes les notices (itemId, itemURL, itemStatus) sont requis. */
+                /* Pour les autres champs obligatoires au corpus, consulter: TELMA/Mes projets/NOM_DU_CORPUS/Types et formulaires                                  */
+                /********************************************************************************************************************************************************/
+                /* Put here all mandatory fields of a record. By default, the fields common to all records (itemId, url, itemStatus) are required.                      */
+                /* For the other mandatory fields in the corpus, see: TELMA/Mes projets/NOM_DU_CORPUS/Types and formulaires                                             */
+                /********************************************************************************************************************************************************/
+                "itemId", // requis par défaut / required by default
+                "itemURL", // requis par défaut / required by default
+                "itemStatus", // requis par défaut / required by default
+                "date",
+                "typeDocument",
+                "incipit",
+                "grattagesReecritures"
+            ]
+            // FIN. Chaque notice est un objet json où chaque mot-clé du schéma est un champ spécifique du corpus.
+            // END. Each item (record) is a json object where each schema keyword is a specific field of the corpus.
+        }
+        // FIN. Information sur la notices de jeu des données. Ce fichier ne contient qu'une seule notice (qui est un objet json).
+        // END. Information about dataset item (item = record). This file contains only one record (which is a json object).
+    }
+}

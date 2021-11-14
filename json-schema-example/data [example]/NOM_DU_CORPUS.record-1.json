@@ -1,0 +1,51 @@
+{
+    "datasetInformation":
+    {
+        "datasetName": "NOM_DU_CORPUS",
+        "datasetURL": "http://telma-chartes.irht.cnrs.fr/NOM_DU_CORPUS",
+        "datasetJsonSchemaURL": "/schemas/NOM_DU_CORPUS.dataset.schema.json",
+        "datasetAuthors":
+        [
+            "Nom, Prénom",
+            "Nom2, Prénom2"
+        ],
+        "datasetPartition":
+        {
+            "PartitionNumber": 1,
+            "PartitionsInDataset": 2,
+            "ItemsInPartition": 10000,
+            "ItemsInDataset": 14782
+        },
+        "datasetCreationDate": "2021-12-31",
+        "datasetLicence": "CC BY-NC-SA 3.0 FR",
+        "datasetStatus": "published"
+    },
+    "datasetItem":
+    {
+        "itemIdTELMA": 1,
+        "itemURL": "http://telma-chartes.irht.cnrs.fr/NOM_DU_CORPUS/notice-acte/1",
+        "itemStatus": "published",
+        "date": "Some data here",
+        "dateLibre": "Some data here",
+        "typeDocument": "Some data here",
+        "incipit": "Some data here",
+        "initiale": "Some data here",
+        "InitialeAutre":
+        {
+            "initialeNue": "Some data here",
+            "initialeCadelee": "Some data here",
+            "initialeCadeleeAutre": "Some data here"
+        },
+        "lettresAllongees": "Some data here",
+        "hastesAllongees": "Some data here",
+        "semblablesAutre":
+        [
+            "Array value 1",
+            "Array value 2"
+        ],
+        "premiereLigneAutre": "Some data here",
+        "nombreLignes": "Some data here",
+        "ratures": "Some data here",
+        "grattagesReecritures": "Some data here"
+    }
+}

@@ -1,0 +1,139 @@
+/****************************************************************************************************************************************************************************/
+/* AVERTISSEMENT: Le format json n’utilise pas les commentaires; un fichier commenté ne peut donc pas être valide. Pour la validation, utilisez les fichiers non commentés. */
+/* CAUTION: The json files don’t use comments; so, a commented file cannot be valid. For validation, use the files without comments.                                        */
+/****************************************************************************************************************************************************************************/
+{
+    // DEBUT. Information sur le jeu des données
+    // BEGIN. Information about dataset
+    "datasetInformation":
+    {
+        "datasetName": "NOM_DU_CORPUS",
+        "datasetURL": "http://telma-chartes.irht.cnrs.fr/NOM_DU_CORPUS",
+        "datasetJsonSchemaURL": "/schemas/NOM_DU_CORPUS.record.schema.json", // Indiquer ici l'URL où se trouve le schema json pour ses données. Tous les schémas seront stockés sur les pages GitHub du COSME2 / Indicate here where is a json schema for these data. All schema will be stored on GitHub profile of COSME2
+        // Les noms des auteurs doivent être uniques
+        // Authors names must be unique
+        "datasetAuthors": 
+        [
+            "Nom, Prénom",
+            "Nom2, Prénom2"
+        ],
+        /*******************************************************************************************************************************/
+        /* Pour éviter d’avoir de trop larges fichiers difficiles à ouvrir, le jeu des données est divisé en plusieurs parties.        */
+        /* La division se fait à la base de 2000 notices pour chaque partie (ce qui est plus ou moins égal à un fichier json de 10MB). */
+        /* PartitionNumber - est le numéro de la partie                                                                                */
+        /* PartitionsInDataset - nombre de parties dans le jeu des données                                                             */
+        /* ItemsInPartition - nombre de l’unité dans la partie                                                                         */
+        /* ItemsInDataset - nombre de l’unité dans le jeu des données                                                                  */
+        /*******************************************************************************************************************************/
+        /* To avoid to have too large files difficult to open, the dataset is divided into several parts.                              */
+        /* The division is made on the basis of 2000 records by part (it's equal, more or less, to a 10MB json file).                  */
+        /* PartitionNumber - parts number                                                                                              */
+        /* PartitionsInDataset - number of parts in the dataset                                                                        */
+        /* ItemsInPartition - number of the items in the part                                                                          */
+        /* ItemsInDataset - number of the items in the dataset                                                                         */
+        /*******************************************************************************************************************************/ 
+        "datasetPartition":
+        {
+            "PartitionNumber": 1,
+            "PartitionsInDataset": 2,
+            "ItemsInPartition": 10000,
+            "ItemsInDataset": 14782
+        },
+        "datasetCreationDate": "2021-12-31",
+        "datasetLicence": "CC BY-NC-SA 3.0 FR",
+        "datasetStatus": "published"
+    },
+    // FIN. Information sur le jeu des données
+    // END. Information about dataset
+
+    /*******************************************************************************************************************************************************************/
+    /* Dans le fichier d’un jeu des données, toutes les notices sont regroupées comme les éléments d’un tableau (array). Chaque notice, à son tour, est un objet json. */
+    /* C'est la seule différence entre le fichier avec un jeu des données et celui avec une seule notice.                                                              */
+    /*******************************************************************************************************************************************************************/
+    /* In a dataset file, all items (item = record) are grouped together like the array elements. Each item, in the same time, is a json object.                       */
+    /* This is the only difference between the file with a dataset and the one with a single record.                                                                   */
+    /********************************************************************************************************************************************************************/
+
+    // DEBUT. Information sur les notices de jeu des données
+    // BEGIN. Information about dataset items
+    "datasetItems":
+    [
+        {
+            /********************************************************************************************************************************************************************/
+            /* Chaque élément d’une notice peut être de trois types:                                                                                                            */
+            /* i) un élément simple;                                                                                                                                            */
+            /* ii) un élément groupé (contient d’autres éléments);                                                                                                              */
+            /* iii) un élément tableau (array) - certains champs d’un corpus peuvent être dupliqués. Dans ce cas, ils sont représentés comme les éléments d’un tableau (array). */
+            /********************************************************************************************************************************************************************/
+            /* Each item element can be one of three types:                                                                                                                     */
+            /* i) a simple element;                                                                                                                                             */
+            /* ii) a grouped element (can contains other elements);                                                                                                             */
+            /* iii) an array element - some corpus fields can be duplicated. In this case, these fields are represented as the array elements.                                  */
+            /********************************************************************************************************************************************************************/
+
+            // DEBUT. Partie commune à toutes les notices
+            // BEGIN. Common parts to all items
+            "itemIdTELMA": 456,
+            "itemURL": "http://telma-chartes.irht.cnrs.fr/NOM_DU_CORPUS/notice-acte/456",
+            "itemStatus": "published", // Indique si la notice est "publié" (=visible pour le public) / Indicate if record is "published" (visible for everybody)
+            // FIN. Partie commune à toutes les notices
+            // END. Common parts to all items
+
+            // DEBUT. Les champs spécifiques à chaque corpus. Les clés json ne sont que des exemples et ils varient en fonction du corpus.
+            // BEGIN. Specific parts for this corpus. The json keys are given only for exemple purpose and they vary according to corpus.
+            "date": "Some data here",
+            "dateLibre": "Some data here",
+            "typeDocument": "Some data here", // C'est un élément simple / This is a simple element
+            "incipit": "Some data here",
+            "initiale": "Some data here",
+            "InitialeAutre": // C'est un élément groupé / This is a grouped element
+            {
+                "initialeNue": "Some data here",
+                "initialeCadelee": "Some data here",
+                "initialeCadeleeAutre": "Some data here"
+            },
+            "lettresAllongees": "Some data here",
+            "hastesAllongees": "Some data here",
+            "semblablesAutre":  // C'est élément tableau (array) / This is an array element
+            [
+                "Array value 1",
+                "Array value 2"
+            ],
+            "premiereLigneAutre": "Some data here",
+            "nombreLignes": "Some data here",
+            "ratures": "Some data here",
+            "grattagesReecritures": "Some data here"
+            // FIN. Les champs spécifiques à chaque corpus. Les clés json ne sont que des exemples et ils varient en fonction du corpus.
+            // END. Specific parts for this corpus. The json keys are given only for exemple purpose and they vary according to corpus.
+        },
+        {
+            "itemIdTELMA": 782, // The TELMA unique identifier for a item. Not the same as corpus unique indentifier; this is, TELMA use two different identifiers, one common for all TELMA corpora, and another one used only at the level of given corpus. This ID is TELMA common ID.
+            "itemURL": "http://telma-chartes.irht.cnrs.fr/NOM_DU_CORPUS/notice-acte/782",
+            "itemStatus": "published",
+            "date": "Some data here",
+            "dateLibre": "Some data here",
+            "typeDocument": "Some data here",
+            "incipit": "Some data here",
+            "initiale": "Some data here",
+            "InitialeAutre":
+            {
+                "initialeNue": "Some data here",
+                "initialeCadelee": "Some data here",
+                "initialeCadeleeAutre": "Some data here"
+            },
+            "lettresAllongees": "Some data here",
+            "hastesAllongees": "Some data here",
+            "semblablesAutre":
+            [
+                "Array value 1",
+                "Array value 2"
+            ],
+            "premiereLigneAutre": "Some data here",
+            "nombreLignes": "Some data here",
+            "ratures": "Some data here",
+            "grattagesReecritures": "Some data here"
+        }
+    ]
+    // FIN. Information sur les notices de jeu des données
+    // END. Information about dataset items
+}

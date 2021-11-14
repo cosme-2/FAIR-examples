@@ -1,0 +1,62 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas [with subschemas]/full.schema/NOM_DU_CORPUS.schema.json",
+    "title": "NOM_DU_CORPUS schema",
+    "description": "It is a complete schema of the corpus. It includes the two subschemas: i) common part for all corpus; ii) specific fields of the given corpus. ",
+    "type": "object",
+    "properties":
+    {
+        // BEGIN. Common information about the dataset
+        "datasetInformation":
+        {
+            "$ref": "/schemas [with subschemas]/subschemas/dataset.common-info/dataset.common-info.subschema.json"
+        },
+        // END. Common information about the dataset
+
+        // BEGIN. If condition. Check if "datasetItems" is array
+        "if":
+        {
+            "properties":
+            {
+                "datasetItems":
+                {
+                    "type": "array"
+                }
+            }
+        },
+        // END. If condition
+
+        // BEGIN. If "datasetItems" is array, it means we have a full dataset, so make validate is as array
+        "then":
+        {
+            "properties":
+            {
+                "datasetItems":
+                {
+                    "description": "Dataset item is one record (act, letter, charte, etc.). Each item element is a field of the record.",
+                    "type": "array",
+                    "items":
+                    {
+                        "$ref": "/schemas [with subschemas]/subschemas/specific-fields/NOM_DU_CORPUS.specific-fields.subschema.json"
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                }
+            }
+        },
+        // END. If "datasetItems" is array, it means we have a full dataset, so make validate is as array
+
+        // BEGIN. If "datasetItems" is not array, it means we have the only one record, so don't make it as array
+        "else":
+        {
+            "properties":
+            {
+                "datasetItems":
+                {
+                    "$ref": "/schemas [with subschemas]/subschemas/specific-fields/NOM_DU_CORPUS.specific-fields.subschema.json"
+                }
+            }
+        }
+        // END. If "datasetItems" is not array, it means we have the only one record, so don't make it as array
+    }
+}

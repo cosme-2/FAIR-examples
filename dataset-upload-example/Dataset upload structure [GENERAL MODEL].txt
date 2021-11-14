@@ -1,0 +1,36 @@
+Dataset upload
+---------------
+
+[dataset_name].zip
+│
+│
+├── README.md (*)
+│
+│
+├── documentation
+│   │
+│   │── schema/model (e.g. - schema.json / schema.xsd / SQL ERD / etc.)
+│   │
+│   ├── additional documentation...
+│   │   
+│   └── vocabulary...
+│
+│
+├── text
+│   │
+│   └── corpus_text
+│       └── [corpus_name].[filename extension] (json/xml/sql/...)
+│
+├── images
+│   ├── [corpus_name-image_number].[filename extension] (jpg/png/tiff/...)
+│   ├── [corpus_name-image_number].[filename extension] (jpg/png/tiff/...)
+│   └── etc...
+│
+│
+└── ... additional content ...
+    ├── ... additional content ...
+    └── ... additional content ...
+
+
+
+(*) The content of README.md will be repeated in the "Description" field of Zenodo during the deposit.

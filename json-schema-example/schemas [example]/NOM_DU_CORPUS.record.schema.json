@@ -1,0 +1,225 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/NOM_DU_CORPUS.record.schema.json",
+    "title": "NOM_DU_CORPUS schema",
+    "description": "It is a complete schema for the file with only one record of dataset. It includes the two parts: i) common part for all corpus; ii) specific fields of the given corpus. ",
+    "type": "object",
+    "properties":
+    {
+        "datasetInformation":
+        {
+            "description": "This is a corpus common informations (title, authors, date of creation, etc.)",
+            "type": "object",
+            "properties":
+            {
+                "datasetName":
+                {
+                    "description": "The name of the dataset",
+                    "type": "string"
+                },
+                "datasetURL":
+                {
+                    "description": "The web adresse where the dataset is published by TELMA",
+                    "type": "string"
+                },
+                "datasetJsonSchemaURL":
+                {
+                    "description": "Indicate here where is a json schema for these data. All schema will be stored on GitHub profile of COSME2",
+                    "type": "string"
+                },
+                "datasetAuthors":
+                {
+                    "description": "The authors of the dataset",
+                    "type": "array",
+                    "items":
+                    {
+                        "type": "string"
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                },
+                "datasetPartition":
+                {
+                    "description": "To avoid to have too large files difficult to open, the dataset is divided into several parts. The division is made on the basis of 2000 records by part (it's equal, more or less, to a 10MB json file).",
+                    "type": "object",
+                    "properties":
+                    {
+                        "PartitionNumber":
+                        {
+                            "description": "parts number",
+                            "type": "integer"
+                        },
+                        "PartitionsInDataset":
+                        {
+                            "description": "number of parts in the dataset",
+                            "type": "integer"
+                        },
+                        "ItemsInPartition":
+                        {
+                            "description": "number of the items in the part",
+                            "type": "integer"
+                        },
+                        "ItemsInDataset":
+                        {
+                            "description": "number of the items in the dataset",
+                            "type": "integer"
+                        }
+                    }
+                },
+                "datasetCreationDate":
+                {
+                    "description": "Date (YYYY-MM-DD, for example, 2018-11-13) when this dataset json file was created. For /date/format/ specification see https://json-schema.org/understanding-json-schema/reference/string.html",
+                    "type": "string",
+                    "format": "date"
+                },
+                "datasetLicence":
+                {
+                    "description": "Licence associated with this dataset",
+                    "type": "string"
+                },
+                "datasetStatus":
+                {
+                    "description": "Mark if the dataset is published or not on TELMA. In TELMA database value 1 means /not published/ and value 2 means /published/. Only can use two defined values /published/ or /not published/",
+                    "type": "string",
+                    "enum":
+                    [
+                        "not published",
+                        "published"
+                    ]
+                }
+            },
+            "required":
+            [
+                "datasetName",
+                "datasetURL",
+                "datasetCreationDate",
+                "datasetLicence"
+            ]
+        },
+        "datasetItem":
+        {
+            "description": "There go the item (item = corpus record) as json object",
+            "type": "object",
+            "properties":
+            {
+                "itemIdTELMA":
+                {
+                    "description": "The TELMA unique identifier for a item. Not the same as corpus unique indentifier; this is, TELMA use two different identifiers, one common for all TELMA corpora, and another one used only at the level of given corpus. This ID is TELMA common ID.",
+                    "type": "integer"
+                },
+                "itemURL":
+                {
+                    "description": "The unique identifier for a item",
+                    "type": "string"
+                },
+                "itemStatus":
+                {
+                    "description": "Mark if the item is published or not on TELMA. In TELMA database value 1 means /not published/ and value 2 means /published/. Only can use two defined values /published/ or /not published/",
+                    "type": "string",
+                    "enum":
+                    [
+                        "not published",
+                        "published"
+                    ]
+                },
+                "date":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "dateLibre":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "typeDocument":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "incipit":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "initiale":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "InitialeAutre":
+                {
+                    "description": "This is a group. Add group description here",
+                    "type": "object",
+                    "properties":
+                    {
+                        "initialeNue":
+                        {
+                            "description": "Add description here",
+                            "type": "string"
+                        },
+                        "initialeCadelee":
+                        {
+                            "description": "Add description here",
+                            "type": "string"
+                        },
+                        "initialeCadeleeAutre":
+                        {
+                            "description": "Add description here",
+                            "type": "string"
+                        }
+                    }
+                },
+                "lettresAllongees":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "hastesAllongees":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "semblablesAutre":
+                {
+                    "description": "Add description here",
+                    "type": "array",
+                    "items":
+                    {
+                        "type": "string"
+                    }
+                },
+                "premiereLigneAutre":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "nombreLignes":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "ratures":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                },
+                "grattagesReecritures":
+                {
+                    "description": "Add description here",
+                    "type": "string"
+                }
+            },
+            "required":
+            [
+                "itemId",
+                "itemURL",
+                "itemStatus",
+                "date",
+                "typeDocument",
+                "incipit",
+                "grattagesReecritures"
+            ]
+        }
+    }
+}
