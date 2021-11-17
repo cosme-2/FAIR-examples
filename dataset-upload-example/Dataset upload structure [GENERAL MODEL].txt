@@ -16,21 +16,15 @@ Dataset upload
 │   └── vocabulary...
 │
 │
-├── text
-│   │
-│   └── corpus_text
-│       └── [corpus_name].[filename extension] (json/xml/sql/...)
-│
-├── images
-│   ├── [corpus_name-image_number].[filename extension] (jpg/png/tiff/...)
-│   ├── [corpus_name-image_number].[filename extension] (jpg/png/tiff/...)
-│   └── etc...
-│
-│
-└── ... additional content ...
-    ├── ... additional content ...
-    └── ... additional content ...
-
+└── text / images / etc.(**)
+    ├── if text, e.g. - [corpus_name].[filename extension] (json/xml/sql/...)
+    ├── if images, e.g. - [corpus_name-image_number].[filename extension] (jpg/png/tiff/...)
+    └── etc...
 
 
 (*) The content of README.md will be repeated in the "Description" field of Zenodo during the deposit.
+
+(**) There are two possible approaches to upload a complex dataset. 
+i) It's possible to divide data by its nature (e.g., text, images, numerical data, etc.) and then upload each type of data as separated datasets (though, all datasets will be linked by intern cross-referencing, see FAIR: I3);
+ii) It's possible to make a big and unified dataset where all types of data (e.g., text, images, numerical data, etc.) will be put together in the same upload. 
+Each approach has its advantages and pitfalls. The upload structure presented here is based on the first approach.
