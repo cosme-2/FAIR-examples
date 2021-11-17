@@ -1,145 +1,208 @@
-**VERSION FRANÇAISE [ENGLISH VERSION BELOW]**
+# DESCRIPTION DU JEU DE DONNÉES
 
----------------------------------------------
+*VERSION FRANÇAISE [ENGLISH VERSION BELOW]*
 
-* Par un "corpus", on entend un ensemble des documents liés par une problématique ou un sujet d'étude commun.
-* Par un "jeu de données", on entend un ensemble des documents, vue alors comme des données, d'un corpus.
-* La différence entre un "corpus" et un "jeu de données" consiste dans la perspective à travers laquelle chaque élément de l'ensemble est abordé. Dans la perspective "historique", chaque élément est un document ; dans la perspective "informatique", chaque élément est une donnée.
+---
 
+- Par un "corpus", on entend un ensemble des documents liés par une problématique ou un sujet d'étude commun.
+- Par un "jeu de données", on entend un ensemble des documents, vue alors comme des données, d'un corpus.
+- La différence entre un "corpus" et un "jeu de données" consiste dans la perspective à travers laquelle chaque élément de l'ensemble est abordé. Dans la perspective "historique", chaque élément est un document ; dans la perspective "informatique", chaque élément est une donnée.
 
-# Information générale
+---
 
-*Intitulé du jeu des données:* NOM_DU_JEU_DES_DONNÉES
+## Information générale
 
-*Auteur(s) du jeu des données (affiliation):*
+### Intitulé du jeu des données
+
+NOM_DU_JEU_DE_DONNÉES
+
+### Auteur(s) du jeu des données (affiliation)
+
 - Nom, Prénom (Institution)
 - Nom, Prénom (Institution)
 - etc.
 
-*Date de la première mise en ligne (des données):* ANNÉE-MM-JJ
+### Date de la première mise en ligne (des données)
 
-*Contributeur(s) (affiliation, rôle):*
+ANNÉE-MM-JJ
+
+### Contributeur(s) (affiliation, rôle)
+
 - Nom, Prénom (Institution, Rôle)
 - Nom, Prénom (Institution, Rôle)
 - etc.
 
-*Financement(s):*
+### Financement(s)
+
 - Financement 1
 - Financement 2
 - etc.
 
-*Description et présentation du corpus et du jeu des données:*
+### Description et présentation du corpus et du jeu des données
 
-Ce corpus, né d’un programme financé par l’Agence nationale de la Recherche, intitulé «Genèse médiévale d’une méthode administrative» (GEMMA), est le résultat d’une grande enquête sur l’évolution des techniques comptables dans les principautés du Sud Est de la France actuelle, Dauphiné, Provence, Savoie et Venaissin, entre le XIIIe et le début du XVIe siècle.
+Ajouter ici la description et la présentation du corpus et du jeu des données.
 
+---
 
+## Données
 
-# Données
+### Langues
 
-## Langues
+#### Langues des données
 
-*Langues des données:*
+ - Langue 1
+ - Langue 2
+ - etc.
 
+### Formats et logiciels
 
-## Formats et logiciels
+#### Formats des données (FAIR I1)
 
-*Formats des données (FAIR I1):*
+ - Format 1
+ - Format 2
+ - etc.
 
-*Logiciels utilisés (nom, version, système d’exploitation) (FAIR I1):*
+#### Logiciels utilisés (nom, version, système d’exploitation) (FAIR I1)
 
-*Motivation des choix des formats et des logiciels (FAIR I1):*
+ - Nom du logiciel 1 (version, système d’exploitation)
+ - Nom du logiciel 2 (version, système d’exploitation)
+ - etc.
 
+#### Motivation des choix des formats et des logiciels (FAIR I1)
 
-## Provenance
+Ajouter ici les motiviations de choix des formats et des logiciels.
 
-*Provenance et historique des données (FAIR R.1.2):*
+### Provenance
 
+#### Provenance et historique des données (FAIR R.1.2)
 
-## Standard et documentation
+Ajouter ici la provenance et l'historique des données.
 
-*Standards et conventions utilisées pour les données (FAIR R1.3):*
+### Standard et documentation
 
-*Renvoi vers documentation / vocabulaire utilisés (FAIR I2):*
+#### Standards et conventions utilisées pour les données (FAIR R1.3)
 
+Ajouter ici la description des standards des conventions utilisées pour les données.
 
-## Droits et licences
+#### Renvoi vers documentation / vocabulaire utilisés (FAIR I2)
 
-*Droit d'accès et licence des données (FAIR R1.1):*
+Ajouter ici les renvois vers la documentation et/ou le vocabulaire utilisés.
 
+### Droits et licences
 
-## Données liées
+#### Droit d'accès et licence des données (FAIR R1.1)
 
-*Données liées (FAIR I3):*
+Ajouter ici le droit d'accès et la licence des données.
 
+### Données liées
 
+#### Données liées (FAIR I3)
 
-**ENGLISH VERSION [VERSION FRANÇAISE PLUS HAUT]**
+- Identifiant des données liées (type de lien, par ex., "*type de lien, par exemple « les images de ce jeu de données (PID) sont les photos des textes de ces jeux de données (PID)*") 1
+- Identifiant des données liées (type de lien, par ex., "*type de lien, par exemple « les images de ce jeu de données (PID) sont les photos des textes de ces jeux de données (PID)*") 
+- etc.
 
--------------------------------------------------
+---
 
-* By a "corpus", we mean a set of documents linked by a common problem or subject of study.
-* By a "dataset", we mean a set of documents, seen then as data, of a given corpus.
-* The difference between a "corpus" and a "dataset" is in the point of view through which each element of the set is approached. From the "historical" point of view, each element is a document; from the "digital" one, each element is a data. 
+# DATASET DESCRIPTION
 
-# General Information
+*ENGLISH VERSION [VERSION FRANÇAISE PLUS HAUT]*
 
-*Title of the dataset:* NAME_OF_DATASET
+---
 
-*Author(s) of the dataset (affiliation):*
+- By a "corpus", we mean a set of documents linked by a common problem or subject of study.
+- By a "dataset", we mean a set of documents, seen then as data, of a given corpus.
+- The difference between a "corpus" and a "dataset" is in the point of view through which each element of the set is approached. From the "historical" point of view, each element is a document; from the "digital" one, each element is a data. 
+
+---
+
+## General Information
+
+### Title of the dataset
+
+NAME_OF_DATASET
+
+### Author(s) of the dataset (affiliation)
+
 - Last name, First name (Institution)
 - Last name, First name (Institution)
 - etc.
 
-*Date of the first upload (of dataset):* YEAR-MM-DD
+### Date of the first upload (of dataset)
 
-*Contributor(s) (affiliation, role):*
+YEAR-MM-DD
+
+### Contributor(s) (affiliation, role)
+
 - Last name, First name (Institution, Role)
 - Last name, First name (Institution, Role)
 - etc.
 
-*Funding(s):*
+### Funding(s)
 - Funding 1
 - Funding 2
 - etc.
 
-*Description and presentation of the corpus and data:*
+### Description and presentation of the corpus and data
 
-Some presentation goes here...
+Add here the description and the presentation of the corpus and data.
 
+---
 
-# Data
+## Data
 
-## Languages
+### Languages
 
-*Data languages:*
+#### Data languages
 
+ - Language 1
+ - Language 2
+ - etc.
 
-## Formats and software
+### Formats and software
 
-*Data formats (FAIR I1):*
+#### Data formats (FAIR I1)
 
-*Software used (name, version, operating system) (FAIR I1):*
+ - Format 1
+ - Format 2
+ - etc.
 
-*Motivation behind of formats and software choice (FAIR I1):*
+#### Software used (name, version, operating system) (FAIR I1)
 
+ - Name of software 1 (version, operating system)
+ - Name of software 2 (version, operating system)
+ - etc.
 
-## Origin
+#### Motivation behind of formats and software choices (FAIR I1)
 
-*Provenance and history of data (FAIR R.1.2):*
+Add here the motivations behind of formats and software choices.
 
+### Origin
 
-## Standard and documentation
+#### Provenance and history of data (FAIR R.1.2)
 
-*Standards and conventions used for data (FAIR R1.3):*
+Add here the provenance and the history of data.
 
-*Reference to used documentation and vocabulary (FAIR I2):*
+### Standard and documentation
 
+#### Standards and conventions used for data (FAIR R1.3)
 
-## Rights and licences
+Add here the standards and the conventions used for data.
 
-*Right of access and data usage license (FAIR R1.1):*
+#### Reference to used documentation and vocabulary (FAIR I2)
 
+Add here the references to used documentation and vocabulary.
 
-## Linked data
+### Rights and licences
 
-*Linked data (FAIR I3):*
+#### Right of access and data usage license (FAIR R1.1)
+
+Add here the right of access and the data usage license.
+
+### Linked data
+
+#### Linked data (FAIR I3)
+
+- Linked data identifier (type of link, e.g., "*the images of this dataset (PID) is the photos of the texts from that dataset (PID)*") 1
+- Linked data identifier (type of link, e.g., "*the images of this dataset (PID) is the photos of the texts from that dataset (PID)*") 2
+- etc.
