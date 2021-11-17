@@ -139,6 +139,7 @@ YEAR-MM-DD
 - etc.
 
 ### Funding(s)
+
 - Funding 1
 - Funding 2
 - etc.
