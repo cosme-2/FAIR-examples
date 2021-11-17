@@ -1,10 +1,10 @@
-# Le contenu du dossier:
+# Contenu du dossier
 
-_N.B. Les exemples des dossiers  "schemas" seront utilisés pour produire les schémas de chaque corpus; pensez donc à changer "NOM_DU_CORPUS" (dans les intitulés des fichiers et à l'intérieur du code) pour les noms réels des corpus._
+*N.B. Les exemples des dossiers "schemas" seront utilisés pour produire les schémas de chaque corpus; pensez donc à changer "NOM_DU_CORPUS" (dans les intitulés des fichiers et à l'intérieur du code) pour les noms réels des corpus.*
 
-_N.B. Remplacer les $id des schémas par URL où les schémas seront hébergés._
+*N.B. Remplacer les $id des schémas par URL où les schémas seront hébergés.*
 
-_N.B. Chaque dossier contient également les version annotées des schémas (marqué comme *[annotated]*). A ne pas oublier que le json pur n'autorise pas les commentaires; la version commenté ne pourra pas donc être validé._
+*N.B. Chaque dossier contient également les versions annotées des schémas (marqué comme [annotated]). À ne pas oublier que le json pur n'autorise pas les commentaires; la version commentée ne pourra pas donc être validée.*
 
 
 ## data [examples]
@@ -23,23 +23,23 @@ La racine du dossier contient deux schémas: un pour le jeu des données (où ch
 
 ### schemas [annotated]
 
-Les version annotées des schémas. À ne pas oublier que le json pur n'autorise pas les commentaires; la version commentée ne pourra pas donc être validée.
+Les versions annotées des schémas. À ne pas oublier que le json pur n'autorise pas les commentaires; la version commentée ne pourra pas donc être validée.
 
 
 ## TEST_schemas [with subschemas]
 
 ### full.schema
 
-Ce dossier contient un schéma s'appuyer sur les sous-schémas (avec Json pointer et $Ref); un sous-schéma décrit les données communes à tous les corpus (auteurs, intitulé, date de la création, etc.) et un autre décrit les champs spécifiques à chaque corpus. De fait, pour éviter la redondance du code et pour faciliter sa maintenance, il est plus opportun de diviser un schéma complexe en plusieurs sous-schémas. De surcroit, cette approche permet d'avoir un seul schéma principal (le choix entre un schéma de "jeu des données" et celui d'une "notice unique" se fait directement à l'intérieur du code).
+Ce dossier contient un schéma s'appuyer sur les sous-schémas (avec Json pointer et $Ref); un sous-schéma décrit les données communes à tous les corpus (auteurs, intitulé, date de la création, etc.) et un autre décrit les champs spécifiques à chaque corpus. De fait, pour éviter la redondance du code et pour faciliter sa maintenance, il est plus opportun de diviser un schéma complexe en plusieurs sous-schémas. De surcroît, cette approche permet d'avoir un seul schéma principal (le choix entre un schéma de "jeu des données" et celui d'une "notice unique" se fait directement à l'intérieur du code).
 
-Cependant, en pratique, il peut parfois s'avérer beaucoup plus difficile à parser et à valider les fichiers contre des schémas qui utilisent les Json Pointer et $Ref (sur ce point, voir infra *Validation des schémas*). Pour faciliter l'usage des schémas au plus grand nombre, il a été alors choisir de prendre comme le schéma principal le schéma plus verbeux et plus longe mais plus facile à valider et à parser (voir supra *schemas*).
+Cependant, en pratique, il peut parfois s'avérer beaucoup plus difficile à parser et à valider les fichiers contre des schémas qui utilisent les Json Pointer et $Ref (sur ce point, voir infra *Validation des schémas*). Pour faciliter l'usage des schémas au plus grand nombre, il a été alors choisir de prendre comme le schéma principal le schéma plus verbeux et plus long, mais plus facile à valider et à parser (voir supra *schemas*).
 
-N.B. Pour valider le schéma qui utiliser les références aux sous-schémas (Json pointer avec $Ref) (voir dossier *schemas [with subschemas]/full.schema*), il faut utiliser les parsers plus spécifiques, par exemple: https://github.com/APIDevTools/json-schema-ref-parser
+N.B. Pour valider le schéma qui utiliser les références aux sous-schémas (Json pointer avec $Ref) (voir dossier *schemas [with subschemas]/full.schema*), il faut utiliser les parsers plus spécifiques, par exemple: [JSON Schema $Ref Parser](https://github.com/APIDevTools/json-schema-ref-parser)
 
 ### subschemas
 
 #### dataset.common-info
 
-Ce sous-schéma répresente les informations communes (intitulé, auteurs, date de la création, etc.) d'un corpus.
+Ce sous-schéma représente les informations communes (intitulé, auteurs, date de la création, etc.) d'un corpus.
 
 #### specific-fields
