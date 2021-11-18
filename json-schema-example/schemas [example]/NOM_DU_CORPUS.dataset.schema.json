@@ -128,27 +128,27 @@
                     },
                     "date":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "dateLibre":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "typeDocument":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "incipit":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "initiale":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "InitialeAutre":
@@ -159,34 +159,34 @@
                         {
                             "initialeNue":
                             {
-                                "description": "Add description here",
+                                "description": "Field description",
                                 "type": "string"
                             },
                             "initialeCadelee":
                             {
-                                "description": "Add description here",
+                                "description": "Field description",
                                 "type": "string"
                             },
                             "initialeCadeleeAutre":
                             {
-                                "description": "Add description here",
+                                "description": "Field description",
                                 "type": "string"
                             }
                         }
                     },
                     "lettresAllongees":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "hastesAllongees":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "semblablesAutre":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "array",
                         "items":
                         {
@@ -195,22 +195,22 @@
                     },
                     "premiereLigneAutre":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "nombreLignes":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "ratures":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "grattagesReecritures":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     }
                 },

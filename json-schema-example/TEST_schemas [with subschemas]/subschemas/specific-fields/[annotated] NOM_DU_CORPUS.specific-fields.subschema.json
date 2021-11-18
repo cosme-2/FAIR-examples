@@ -29,107 +29,107 @@
         },
         "date":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "dateLibre":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "typeDocument":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "typeDocumentAutre":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "categorieDocument":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "categorieRegistre":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "coteArchive":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "support":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "lettreRetaillee":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "hauteurDepliee":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "largeur":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "repliEventuel":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "margeSuperieureInitiale":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "margeSuperieureHastes":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "margeLaterale1":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "margeLaterale2":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "adresse":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "salut":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "formulePerpetuite":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "incipit":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "initiale":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "InitialeAutre":
@@ -140,47 +140,47 @@
         },
         "lettresAllongees":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "hastesAllongees":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "semblablesAutre":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "premiereLigneAutre":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "nombreLignes":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "ratures":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "grattagesReecritures":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "descriptionAutre":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "bulleAnneau":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "bulleAnneauAutre":
@@ -191,117 +191,117 @@
         },
         "marqueApprobationDroit":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "marqueApprobationDroitAutre":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "marqueApprobationGauche":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "marqueApprobationGaucheAutre":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "taxation":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "taxateur":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "mentionsPlicaAutre":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "marqueTrousAttache":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "scriptor":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "rescrit":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "mentionsHorsTeneurPlicaAutre":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "adresseExterne":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "marquesEnregistrement":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "porteur":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "destinataire":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "mentionsHorsTeneurFaceBAutre":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "analysesMedievales":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "analyseContemporaine":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "transcription":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "notes":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "donnesReuniesPar":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "donneesSaisiesPar":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         },
         "correctionsRevisionsPar":
         {
-            "description": "Add description here",
+            "description": "Field description",
             "type": "string"
         }
         // END. Information about a specific fields of dataset item (record)
@@ -329,17 +329,17 @@
             {
                 "initialeNue":
                 {
-                    "description": "Add description here",
+                    "description": "Field description",
                     "type": "string"
                 },
                 "initialeCadelee":
                 {
-                    "description": "Add description here",
+                    "description": "Field description",
                     "type": "string"
                 },
                 "initialeCadeleeAutre":
                 {
-                    "description": "Add description here",
+                    "description": "Field description",
                     "type": "string"
                 }
             }
@@ -355,42 +355,42 @@
             {
                 "presenceBulle":
                 {
-                    "description": "Add description here",
+                    "description": "Field description",
                     "type": "string"
                 },
                 "dechirureSupport":
                 {
-                    "description": "Add description here",
+                    "description": "Field description",
                     "type": "string"
                 },
                 "tracePerforation":
                 {
-                    "description": "Add description here",
+                    "description": "Field description",
                     "type": "string"
                 },
                 "attacheRestauree":
                 {
-                    "description": "Add description here",
+                    "description": "Field description",
                     "type": "string"
                 },
                 "bulleFil":
                 {
-                    "description": "Add description here",
+                    "description": "Field description",
                     "type": "string"
                 },
                 "bulleFilAutre":
                 {
-                    "description": "Add description here",
+                    "description": "Field description",
                     "type": "string"
                 },
                 "couleurSoie":
                 {
-                    "description": "Add description here",
+                    "description": "Field description",
                     "type": "string"
                 },
                 "couleurSoieAutre":
                 {
-                    "description": "Add description here",
+                    "description": "Field description",
                     "type": "string"
                 }
             },

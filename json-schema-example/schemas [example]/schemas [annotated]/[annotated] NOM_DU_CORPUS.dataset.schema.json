@@ -186,12 +186,12 @@
                     // BEGIN. Specific parts for this corpus. The json keys are given only for exemple purpose and they vary accordint to corpus.
                     "date":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "dateLibre":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
 
@@ -199,7 +199,7 @@
                     // BEGIN. Example - Simple element
                     "typeDocument":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     // FIN. Exemple - Elément simple
@@ -207,12 +207,12 @@
 
                     "incipit":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "initiale":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
 
@@ -227,17 +227,17 @@
                         {
                             "initialeNue":
                             {
-                                "description": "Add description here",
+                                "description": "Field description",
                                 "type": "string"
                             },
                             "initialeCadelee":
                             {
-                                "description": "Add description here",
+                                "description": "Field description",
                                 "type": "string"
                             },
                             "initialeCadeleeAutre":
                             {
-                                "description": "Add description here",
+                                "description": "Field description",
                                 "type": "string"
                             }
                         }
@@ -247,12 +247,12 @@
 
                     "lettresAllongees":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "hastesAllongees":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
 
@@ -260,7 +260,7 @@
                     // BEGIN. Example - Array element. If necessary, add additional conditions (unique value only, minimum number of items, etc.)
                     "semblablesAutre":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "array",
                         "items":
                         {
@@ -272,22 +272,22 @@
 
                     "premiereLigneAutre":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "nombreLignes":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "ratures":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     },
                     "grattagesReecritures":
                     {
-                        "description": "Add description here",
+                        "description": "Field description",
                         "type": "string"
                     }
                     // FIN. Les champs spécifiques à chaque corpus. Les clés json ne sont que des exemples et ils varient en fonction du corpus.
