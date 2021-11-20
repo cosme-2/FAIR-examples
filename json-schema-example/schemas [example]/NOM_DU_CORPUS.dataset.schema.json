@@ -126,6 +126,11 @@
                             "published"
                         ]
                     },
+                    "itemType":
+                    {
+                        "description": "The type of item (usually it is an 'acte')",
+                        "type": "string"
+                    },
                     "date":
                     {
                         "description": "Field description",

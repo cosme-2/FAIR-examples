@@ -75,6 +75,7 @@
         "itemIdTELMA": 1, // The TELMA unique identifier for a item. Not the same as corpus unique indentifier; this is, TELMA use two different identifiers, one common for all TELMA corpora, and another one used only at the level of given corpus. This ID is TELMA common ID.
         "itemURL": "http://telma-chartes.irht.cnrs.fr/NOM_DU_CORPUS/notice-acte/1",
         "itemStatus": "published",
+        "itemType": "acte",
         // FIN. Partie commune à toutes les notices
         // END. Common parts to all items
         

@@ -25,6 +25,7 @@
         "itemIdTELMA": 1,
         "itemURL": "http://telma-chartes.irht.cnrs.fr/NOM_DU_CORPUS/notice-acte/1",
         "itemStatus": "published",
+        "itemType": "acte",
         "date": "Some data here",
         "dateLibre": "Some data here",
         "typeDocument": "Some data here",
