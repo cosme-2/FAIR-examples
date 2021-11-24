@@ -38,34 +38,6 @@
                     "minItems": 1,
                     "uniqueItems": true
                 },
-                "datasetPartition":
-                {
-                    "description": "To avoid to have too large files difficult to open, the dataset is divided into several parts. The division is made on the basis of 2000 records by part (it's equal, more or less, to a 10MB json file).",
-                    "type": "object",
-                    "properties":
-                    {
-                        "PartitionNumber":
-                        {
-                            "description": "parts number",
-                            "type": "integer"
-                        },
-                        "PartitionsInDataset":
-                        {
-                            "description": "number of parts in the dataset",
-                            "type": "integer"
-                        },
-                        "ItemsInPartition":
-                        {
-                            "description": "number of the items in the part",
-                            "type": "integer"
-                        },
-                        "ItemsInDataset":
-                        {
-                            "description": "number of the items in the dataset",
-                            "type": "integer"
-                        }
-                    }
-                },
                 "datasetCreationDate":
                 {
                     "description": "Date (YYYY-MM-DD, for example, 2018-11-13) when this dataset json file was created. For /date/format/ specification see https://json-schema.org/understanding-json-schema/reference/string.html",

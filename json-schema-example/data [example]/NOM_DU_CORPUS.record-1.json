@@ -9,13 +9,6 @@
             "Nom, Prénom",
             "Nom2, Prénom2"
         ],
-        "datasetPartition":
-        {
-            "PartitionNumber": 1,
-            "PartitionsInDataset": 2,
-            "ItemsInPartition": 10000,
-            "ItemsInDataset": 14782
-        },
         "datasetCreationDate": "2021-12-31",
         "datasetLicence": "CC BY-NC-SA 3.0 FR",
         "datasetStatus": "published"

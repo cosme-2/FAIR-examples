@@ -10,6 +10,17 @@
 /* This is a schema model based on the fictif data. The purpose of this model is to indicate the main elements and schema structure.                                        */
 /* For a schema based on the real corpus data, use the not annotated schema.                                                                                                */
 /****************************************************************************************************************************************************************************/
+
+/****************************************************************************************************************************************************************************/
+/* Encodage des caractères. Certains éléments peuvent contenir les restes des balises XML encodées alors selon les modèles différents                                       */
+/* (soit les entités HTML soit l'échappement avec la barre oblique inversée).                                                                                               */
+/* Pour plus de détails sur ce point, voir le fichier "README[documentation].md" qui accompagne ce document.                                                                */
+/****************************************************************************************************************************************************************************/
+/* Character encoding. Some elements can contain the remains of the XML tags which was encoded according to the different models                                            */
+/* (either the HTML entities or the escape with the backslash).                                                                                                             */
+/* For more details on this point, see the "README [documentation].md" file joined to this documentation.                                                                   */
+/****************************************************************************************************************************************************************************/
+
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "/NOM_DU_CORPUS.record.schema.json",
@@ -54,49 +65,6 @@
                     // Il faut au moins un auteur. Les noms des auteurs doivent être uniques
                     // Minium 1 autor. Authors names must be unique
                 },
-                /*******************************************************************************************************************************/
-                /* Pour éviter d’avoir de trop larges fichiers difficiles à ouvrir, le jeu des données est divisé en plusieurs parties.        */
-                /* La division se fait à la base de 2000 notices pour chaque partie (ce qui est plus ou moins égal à un fichier json de 10MB). */
-                /* PartitionNumber - est le numéro de la partie                                                                                */
-                /* PartitionsInDataset - nombre de parties dans le jeu des données                                                             */
-                /* ItemsInPartition - nombre de l’unité dans la partie                                                                         */
-                /* ItemsInDataset - nombre de l’unité dans le jeu des données                                                                  */
-                /*******************************************************************************************************************************/
-                /* To avoid to have too large files difficult to open, the dataset is divided into several parts.                              */
-                /* The division is made on the basis of 2000 records by part (it's equal, more or less, to a 10MB json file).                  */
-                /* PartitionNumber - parts number                                                                                              */
-                /* PartitionsInDataset - number of parts in the dataset                                                                        */
-                /* ItemsInPartition - number of the items in the part                                                                          */
-                /* ItemsInDataset - number of the items in the dataset                                                                         */
-                /*******************************************************************************************************************************/
-                "datasetPartition":
-                {
-                    "description": "To avoid to have too large files difficult to open, the dataset is divided into several parts. The division is made on the basis of 2000 records by part (it's equal, more or less, to a 10MB json file).",
-                    "type": "object",
-                    "properties":
-                    {
-                        "PartitionNumber":
-                        {
-                            "description": "parts number",
-                            "type": "integer"
-                        },
-                        "PartitionsInDataset":
-                        {
-                            "description": "number of parts in the dataset",
-                            "type": "integer"
-                        },
-                        "ItemsInPartition":
-                        {
-                            "description": "number of the items in the part",
-                            "type": "integer"
-                        },
-                        "ItemsInDataset":
-                        {
-                            "description": "number of the items in the dataset",
-                            "type": "integer"
-                        }
-                    }
-                },
                 "datasetCreationDate":
                 {
                     "description": "Date (YYYY-MM-DD, for example, 2018-11-13) when this dataset json file was created. For /date/format/ specification see https://json-schema.org/understanding-json-schema/reference/string.html",
@@ -132,13 +100,17 @@
         // FIN. Information sur le jeu des données. Cette information est commune à tous les corpus de TELMA
         // END. Information about dataset. This information is commun for all TELMA corpora.
  
-        /*******************************************************************************************************************************************************************/
-        /* Dans le fichier d’un jeu des données, toutes les notices sont regroupées comme les éléments d’un tableau (array). Chaque notice, à son tour, est un objet json. */
-        /* C'est la seule différence entre le fichier avec un jeu des données et celui avec une seule notice.                                                              */
-        /*******************************************************************************************************************************************************************/
-        /* In a dataset file, all items (item = record) are grouped together like the array elements. Each item, in the same time, is a json object.                       */
-        /* This is the only difference between the file with a dataset and the one with a single record.                                                                   */
-        /********************************************************************************************************************************************************************/
+        /********************************************************************************************************************************************************************************************/
+        /* Les différences entre les schémas d'un jeu de données et d'une notice.                                                                                                                   */
+        /* i) Dans le fichier d’un jeu de données, toutes les notices sont regroupées comme les éléments d’un tableau (array). Chaque notice, à son tour, est un objet json.                        */
+        /* ii) La clé "datasetItems" du jeu de données est remplacée par la clé "datasetItem" dans la notice. (C'est la clé qui regroupe les informations sur la notice).                           */
+        /* iii) La clé "datasetPartition" est absente du schéma de la notice. (Cette clé, quand elle est requise, est présente dans le groupe qui contient les informations sur le jeu de données). */                                                            
+        /********************************************************************************************************************************************************************************************/
+        /* The differences between the dataset and record schemas.                                                                                                                                  */                                                                                                       
+        /* i) In a dataset file, all items (item = record) are grouped together like the array elements. Each item, at the same time, is a json object.                                             */
+        /* ii) The "datasetItems" key in the dataset is replaced by the "datasetItem" key in the record. (This is the key that contain the record detailed information).                            */
+        /* iii) The "datasetPartition" key is not present in the record schema. (This key, when required, is present in the group that contains information about the dataset).                    */                                                               
+        /********************************************************************************************************************************************************************************************/
 
         // DEBUT. Information sur la notices de jeu des données. Ce fichier ne contient qu'une seule notice (qui est un objet json).
         // BEGIN. Information about dataset item (item = record). This file contains only one record (which is a json object).

@@ -10,6 +10,17 @@
 /* This is a schema model based on the fictif data. The purpose of this model is to indicate the main elements and schema structure.                                        */
 /* For a schema based on the real corpus data, use the not annotated schema.                                                                                                */
 /****************************************************************************************************************************************************************************/
+
+/****************************************************************************************************************************************************************************/
+/* Encodage des caractères. Certains éléments peuvent contenir les restes des balises XML encodées alors selon les modèles différents                                       */
+/* (soit les entités HTML soit l'échappement avec la barre oblique inversée).                                                                                               */
+/* Pour plus de détails sur ce point, voir le fichier "README[documentation].md" qui accompagne ce document.                                                                */
+/****************************************************************************************************************************************************************************/
+/* Character encoding. Some elements can contain the remains of the XML tags which was encoded according to the different models                                            */
+/* (either the HTML entities or the escape with the backslash).                                                                                                             */
+/* For more details on this point, see the "README [documentation].md" file joined to this documentation.                                                                   */
+/****************************************************************************************************************************************************************************/
+
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "/NOM_DU_CORPUS.dataset.schema.json",
@@ -55,15 +66,15 @@
                     // Minium 1 autor. Authors names must be unique
                 },
                 /*******************************************************************************************************************************/
-                /* Pour éviter d’avoir de trop larges fichiers difficiles à ouvrir, le jeu des données est divisé en plusieurs parties.        */
-                /* La division se fait à la base de 2000 notices pour chaque partie (ce qui est plus ou moins égal à un fichier json de 10MB). */
+                /* Pour éviter d’avoir de trop larges fichiers difficiles à ouvrir, le jeu des données peut être divisé en plusieurs parties.  */
+                /* La division se fait dans le cas si la taille du fichier d'un jeu de données complet excède les 45Mo.                       */
                 /* PartitionNumber - est le numéro de la partie                                                                                */
                 /* PartitionsInDataset - nombre de parties dans le jeu des données                                                             */
                 /* ItemsInPartition - nombre de l’unité dans la partie                                                                         */
                 /* ItemsInDataset - nombre de l’unité dans le jeu des données                                                                  */
                 /*******************************************************************************************************************************/
-                /* To avoid to have too large files difficult to open, the dataset is divided into several parts.                              */
-                /* The division is made on the basis of 2000 records by part (it's equal, more or less, to a 10MB json file).                  */
+                /* To avoid to have too large files difficult to open, the dataset can be divided into several parts.                          */
+                /* The division is done in the case if the file size of a complete dataset exceeds 45MB.                                       */
                 /* PartitionNumber - parts number                                                                                              */
                 /* PartitionsInDataset - number of parts in the dataset                                                                        */
                 /* ItemsInPartition - number of the items in the part                                                                          */
@@ -133,11 +144,9 @@
         // END. Information about dataset. This information is commun for all TELMA corpora.
  
         /*******************************************************************************************************************************************************************/
-        /* Dans le fichier d’un jeu des données, toutes les notices sont regroupées comme les éléments d’un tableau (array). Chaque notice, à son tour, est un objet json. */
-        /* C'est la seule différence entre le fichier avec un jeu des données et celui avec une seule notice.                                                              */
+        /* Dans le fichier d’un jeu des données, toutes les notices sont regroupées comme les éléments d’un tableau (array). Chaque notice, à son tour, est un objet json. */                                                              */
         /*******************************************************************************************************************************************************************/
         /* In a dataset file, all items (item = record) are grouped together like the array elements. Each item, in the same time, is a json object.                       */
-        /* This is the only difference between the file with a dataset and the one with a single record.                                                                   */
         /********************************************************************************************************************************************************************/
 
         // DEBUT. Information sur les notices de jeu des données. Les notices sont regroupées comme un tableau (array).
@@ -164,7 +173,7 @@
                     },
                     "itemURL":
                     {
-                        "description": "The unique identifier for a item",
+                        "description": "The item web adresse",
                         "type": "string"
                     },
                     "itemStatus":
@@ -188,7 +197,7 @@
                     // END. Common parts to all items
 
                     // DEBUT. Les champs spécifiques à chaque corpus. Les clés json ne sont que des exemples et ils varient en fonction du corpus.
-                    // BEGIN. Specific parts for this corpus. The json keys are given only for exemple purpose and they vary accordint to corpus.
+                    // BEGIN. Specific parts for this corpus. The json keys are given only for exemple purpose and they vary according to corpus.
                     "date":
                     {
                         "description": "Field description",
@@ -296,7 +305,7 @@
                         "type": "string"
                     }
                     // FIN. Les champs spécifiques à chaque corpus. Les clés json ne sont que des exemples et ils varient en fonction du corpus.
-                    // END. Specific parts for this corpus. The json keys are given only for exemple purpose and they vary accordint to corpus.
+                    // END. Specific parts for this corpus. The json keys are given only for exemple purpose and they vary according to corpus.
                 },
                 "required":
                 [
@@ -325,4 +334,3 @@
         // END. Information about dataset items (item = record). All items is grouped as array.
 
     }
-}
