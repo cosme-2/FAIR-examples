@@ -7,6 +7,9 @@ Dataset upload
 ├── README.md (*)
 │
 │
+├── CHANGELOG.md
+│
+│
 ├── documentation
 │   │
 │   │── schema/model (e.g. - schema.json / schema.xsd / SQL ERD / etc.)
