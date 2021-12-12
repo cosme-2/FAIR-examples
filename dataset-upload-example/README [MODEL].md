@@ -98,8 +98,8 @@ Ajouter ici le droit d'accès et la licence des données.
 
 #### Données liées (FAIR I3)
 
-- Identifiant des données liées (type de lien, par ex., "*type de lien, par exemple « les images de ce jeu de données (PID) sont les photos des textes de ces jeux de données (PID)*") 1
-- Identifiant des données liées (type de lien, par ex., "*type de lien, par exemple « les images de ce jeu de données (PID) sont les photos des textes de ces jeux de données (PID)*") 
+- Identifiant des données liées (type de lien, par ex., "*les images de ce jeu de données (PID) sont les photos des textes de ces jeux de données (PID)*") 1
+- Identifiant des données liées (type de lien, par ex., "*les images de ce jeu de données (PID) sont les photos des textes de ces jeux de données (PID)*") 2
 - etc.
 
 ---
