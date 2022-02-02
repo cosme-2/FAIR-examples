@@ -30,7 +30,7 @@ Les versions annotées des schémas. À ne pas oublier que le json pur n'autoris
 
 ### full.schema
 
-Ce dossier contient un schéma s'appuyer sur les sous-schémas (avec Json pointer et $Ref); un sous-schéma décrit les données communes à tous les corpus (auteurs, intitulé, date de la création, etc.) et un autre décrit les champs spécifiques à chaque corpus. De fait, pour éviter la redondance du code et pour faciliter sa maintenance, il est plus opportun de diviser un schéma complexe en plusieurs sous-schémas. De surcroît, cette approche permet d'avoir un seul schéma principal (le choix entre un schéma de "jeu des données" et celui d'une "notice unique" se fait directement à l'intérieur du code).
+Ce dossier contient un schéma qui s'appuie sur les sous-schémas (avec Json pointer et $Ref); un sous-schéma décrit les données communes à tous les corpus (auteurs, intitulé, date de la création, etc.) et un autre décrit les champs spécifiques à chaque corpus. De fait, pour éviter la redondance du code et pour faciliter sa maintenance, il est plus opportun de diviser un schéma complexe en plusieurs sous-schémas. De surcroît, cette approche permet d'avoir un seul schéma principal (le choix entre un schéma de "jeu des données" et celui d'une "notice unique" se fait directement à l'intérieur du code).
 
 Cependant, en pratique, il peut parfois s'avérer beaucoup plus difficile à parser et à valider les fichiers contre des schémas qui utilisent les Json Pointer et $Ref (sur ce point, voir infra *Validation des schémas*). Pour faciliter l'usage des schémas au plus grand nombre, il a été alors choisir de prendre comme le schéma principal le schéma plus verbeux et plus long, mais plus facile à valider et à parser (voir supra *schemas*).
 
