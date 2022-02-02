@@ -34,7 +34,7 @@ Ce dossier contient un schéma qui s'appuie sur les sous-schémas (avec Json poi
 
 Cependant, en pratique, il peut parfois s'avérer beaucoup plus difficile à parser et à valider les fichiers contre des schémas qui utilisent les Json Pointer et $Ref (sur ce point, voir infra *Validation des schémas*). Pour faciliter l'usage des schémas au plus grand nombre, il a été alors choisir de prendre comme le schéma principal le schéma plus verbeux et plus long, mais plus facile à valider et à parser (voir supra *schemas*).
 
-N.B. Pour valider le schéma qui utiliser les références aux sous-schémas (Json pointer avec $Ref) (voir dossier *schemas [with subschemas]/full.schema*), il faut utiliser les parsers plus spécifiques, par exemple: [JSON Schema $Ref Parser](https://github.com/APIDevTools/json-schema-ref-parser)
+N.B. Pour valider le schéma qui utilise les références aux sous-schémas (Json pointer avec $Ref) (voir dossier *schemas [with subschemas]/full.schema*), il faut utiliser les parsers plus spécifiques, par exemple: [JSON Schema $Ref Parser](https://github.com/APIDevTools/json-schema-ref-parser)
 
 ### subschemas
 
