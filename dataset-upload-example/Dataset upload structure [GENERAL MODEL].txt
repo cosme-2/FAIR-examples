@@ -12,7 +12,7 @@ Dataset upload
 │
 ├── documentation
 │   │
-│   │── schema/model (e.g. - schema.json / schema.xsd / SQL ERD / etc.)
+│   │── schema/model (e.g. - schema.json / schema.xsd / SQL ERD / etc.) 
 │   │
 │   ├── additional documentation...
 │   │   
