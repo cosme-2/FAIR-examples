@@ -1,4 +1,4 @@
-# COSME²{FAIR} - FAIR examples
+# COSME²{FAIR} - FAIR examples 
 
 Ce répertoire contient les exemples et les modèles qui peuvent être utilisés pour la FAIRisation des données.
 
